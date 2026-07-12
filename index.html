@@ -3,192 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>R15M — Blue Beast 🔥</title>
+  <title>R15M — RACE MODE 🏁</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Rajdhani:wght@500;600;700&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Custom cursor glow -->
   <div class="cursor-glow" id="cursorGlow"></div>
 
-  <!-- Animated background blobs -->
-  <div class="bg-blobs">
-    <span class="blob blob-1"></span>
-    <span class="blob blob-2"></span>
-    <span class="blob blob-3"></span>
+  <!-- Racing speed lines background -->
+  <div class="speed-lines">
+    <span></span><span></span><span></span><span></span><span></span>
   </div>
 
-  <!-- Progress bar -->
-  <div class="scroll-progress" id="scrollProgress"></div>
+  <!-- Checkered top strip -->
+  <div class="checker-strip"></div>
 
   <!-- Navbar -->
   <nav class="nav">
-    <a href="#hero" class="logo">R15<span>M</span></a>
+    <a href="#" class="logo" data-goto="0">R15<span>M</span><i class="logo-flag">🏁</i></a>
     <ul class="nav-links">
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#specs">Specs</a></li>
-      <li><a href="#keunggulan">Keunggulan</a></li>
-      <li><a href="#cta" class="nav-cta">Say Hi 👋</a></li>
+      <li><a href="#" data-goto="1">Gallery</a></li>
+      <li><a href="#" data-goto="2">Specs</a></li>
+      <li><a href="#" data-goto="3">Keunggulan</a></li>
+      <li><a href="#" class="nav-cta" data-goto="4">Say Hi 🏁</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero" id="hero">
-    <div class="hero-noise"></div>
-    <div class="hero-content">
-      <p class="tagline reveal">// YAMAHA · R15 · V4M</p>
-      <h1 class="hero-title">
-        <span class="line reveal">THE BLUE</span>
-        <span class="line reveal gradient-text">BEAST</span>
-      </h1>
-      <p class="hero-sub reveal">
-        Bukan sekadar motor — ini <b>statement</b>. Aura sport bike, LED biru menyala,
-        dan suara knalpot yang bikin nengok. Ridivi mode: <span class="blink">ON</span> 🏍️💨
-      </p>
-      <div class="hero-btns reveal">
-        <a href="#gallery" class="btn btn-primary">Lihat Gallery ✦</a>
-        <a href="#keunggulan" class="btn btn-ghost">Kenapa Keren?</a>
-      </div>
-      <div class="hero-stats reveal">
-        <div class="stat"><span class="num" data-target="155">0</span><small>cc VVA</small></div>
-        <div class="stat"><span class="num" data-target="18">0</span><small>HP Power</small></div>
-        <div class="stat"><span class="num" data-target="137">0</span><small>Kg Ringan</small></div>
-      </div>
-    </div>
-    <div class="hero-visual reveal">
-      <div class="glow-ring"></div>
-      <img src="image.png" alt="Yamaha R15M" class="hero-img" />
-      <span class="badge badge-1">Blue LED 💙</span>
-      <span class="badge badge-2">XRX Exhaust 🔊</span>
-    </div>
-    <div class="scroll-hint">
-      <span>scroll</span>
-      <div class="mouse"><i></i></div>
-    </div>
-  </header>
+  <!-- Lap / slide progress -->
+  <div class="lap-bar"><span id="lapFill"></span></div>
 
-  <!-- Marquee -->
-  <div class="marquee">
-    <div class="marquee-track">
-      <span>DELTABOX FRAME ✦ VVA ENGINE ✦ USD FORK ✦ NIGHT RIDER ✦ AGGRESSIVE ✦ FULL FAIRING ✦ BLUE CORE ✦ </span>
-      <span>DELTABOX FRAME ✦ VVA ENGINE ✦ USD FORK ✦ NIGHT RIDER ✦ AGGRESSIVE ✦ FULL FAIRING ✦ BLUE CORE ✦ </span>
-    </div>
+  <!-- SLIDE DECK -->
+  <main class="deck" id="deck">
+
+    <!-- ===== SLIDE 0 · HERO ===== -->
+    <section class="slide hero" id="s-hero">
+      <div class="grid-floor"></div>
+      <div class="hero-content">
+        <p class="tagline">// YAMAHA · R15 · V4M · RACE SPEC</p>
+        <div class="plate">
+          <span class="plate-num">46</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="line">BLUE</span>
+          <span class="line gradient-text">RACER</span>
+        </h1>
+        <p class="hero-sub">
+          Bukan sekadar motor — ini <b>mesin balap harian</b>. Livery sport, LED biru menyala,
+          dan raungan knalpot <b>WRX</b> yang bikin nengok. Engine start: <span class="blink">ON</span> 🏍️💨
+        </p>
+        <div class="hero-btns">
+          <a href="#" class="btn btn-primary" data-goto="1">Masuk Pit ✦</a>
+          <a href="#" class="btn btn-ghost" data-goto="3">Kenapa Kencang?</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="num" data-target="155">0</span><small>cc VVA</small></div>
+          <div class="stat"><span class="num" data-target="18">0</span><small>HP Power</small></div>
+          <div class="stat"><span class="num" data-target="137">0</span><small>Kg Ringan</small></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="tacho">
+          <span class="tacho-red"></span>
+          <span class="tacho-needle"></span>
+          <b>RPM</b>
+        </div>
+        <div class="glow-ring"></div>
+        <img src="image.png" alt="Yamaha R15M" class="hero-img" />
+        <span class="badge badge-1">Blue LED 💙</span>
+        <span class="badge badge-2">WRX Exhaust 🔊</span>
+      </div>
+    </section>
+
+    <!-- ===== SLIDE 1 · GALLERY ===== -->
+    <section class="slide gallery" id="s-gallery">
+      <div class="slide-inner">
+        <div class="section-head">
+          <span class="eyebrow">📸 Pit Lane Shots</span>
+          <h2>Real Shots, No Cap</h2>
+          <p>Sesi malam yang aesthetic. Setiap sudut punya cerita.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="g-item g-big" data-tilt>
+            <img src="image.png" alt="R15M tampak depan" />
+            <figcaption>Front Face · Blue LED Eyes 👁️</figcaption>
+          </figure>
+          <figure class="g-item" data-tilt>
+            <img src="WhatsApp Image 2026-07-12 at 20.30.43.jpeg" alt="Knalpot WRX R15M" />
+            <figcaption>WRX Exhaust · Ganas 🔊</figcaption>
+          </figure>
+          <figure class="g-item" data-tilt>
+            <img src="WhatsApp Image 2026-07-12 at 20.30.44.jpeg" alt="Detail R15M" />
+            <figcaption>Detail Mode · Clean 🧼</figcaption>
+          </figure>
+          <figure class="g-item" data-tilt>
+            <img src="WhatsApp Image 2026-07-12 at 20.30.45.jpeg" alt="R15M side" />
+            <figcaption>Side Profile · Iconic ⚡</figcaption>
+          </figure>
+          <figure class="g-item g-wide" data-tilt>
+            <img src="WhatsApp Image 2026-07-12 at 20.30.45 (1).jpeg" alt="R15M angle" />
+            <figcaption>Golden Angle · Mahal Look 💎</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SLIDE 2 · SPECS ===== -->
+    <section class="slide specs" id="s-specs">
+      <div class="slide-inner">
+        <div class="section-head">
+          <span class="eyebrow">⚙️ The Numbers</span>
+          <h2>Spek yang Bikin Melongo</h2>
+        </div>
+        <div class="specs-grid">
+          <div class="spec-card">
+            <h3>155.1 cc</h3>
+            <p>Mesin liquid-cooled 4-stroke, SOHC 4-valve dengan teknologi VVA.</p>
+          </div>
+          <div class="spec-card">
+            <h3>Deltabox</h3>
+            <p>Sasis Deltabox khas R-Series, ringan tapi rigid buat handling maksimal.</p>
+          </div>
+          <div class="spec-card">
+            <h3>USD Fork</h3>
+            <p>Suspensi upside-down bikin stabil di kecepatan tinggi & tikungan tajam.</p>
+          </div>
+          <div class="spec-card">
+            <h3>Quick Shifter</h3>
+            <p>Ganti gigi tanpa kopling — feel MotoGP di jalanan harian. 🏁</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SLIDE 3 · KEUNGGULAN ===== -->
+    <section class="slide adv" id="s-adv">
+      <div class="slide-inner">
+        <div class="section-head">
+          <span class="eyebrow">🏆 Why It Slaps</span>
+          <h2>Keunggulan <span class="gradient-text">R15M-ku</span></h2>
+          <p>Alasan kenapa motor ini beda dari yang lain.</p>
+        </div>
+        <div class="adv-grid">
+          <article class="adv-card">
+            <div class="adv-icon">🎨</div>
+            <h3>Desain Aggressive & Elegan</h3>
+            <p>Livery biru-putih dengan full fairing yang bikin siapapun nengok pas lewat. Aura sport bike premium yang gak murahan.</p>
+          </article>
+          <article class="adv-card">
+            <div class="adv-icon">💙</div>
+            <h3>Blue LED Signature</h3>
+            <p>Lampu LED biru menyala tajam di malam hari. Estetik banget buat night ride, tampil beda dari yang standar.</p>
+          </article>
+          <article class="adv-card">
+            <div class="adv-icon">🔊</div>
+            <h3>Knalpot WRX Ganas</h3>
+            <p>Suara racing yang bulat dan berkarakter. Bikin adrenalin naik tiap kali digas, tapi tetap enak didengar.</p>
+          </article>
+          <article class="adv-card">
+            <div class="adv-icon">⚡</div>
+            <h3>Performa Responsif</h3>
+            <p>Mesin VVA 155cc yang bertenaga di putaran atas. Akselerasi galak, cocok buat harian maupun touring.</p>
+          </article>
+          <article class="adv-card">
+            <div class="adv-icon">🛡️</div>
+            <h3>Handling Presisi</h3>
+            <p>Sasis Deltabox + USD fork bikin motor stabil dan lincah. Nikung jadi PD, badan ikut nyatu sama motor.</p>
+          </article>
+          <article class="adv-card">
+            <div class="adv-icon">💎</div>
+            <h3>Value & Gengsi</h3>
+            <p>Punya R15M bukan cuma soal transportasi — ini investasi gaya. Look mahal, feel mewah, vibe juara.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SLIDE 4 · CTA ===== -->
+    <section class="slide cta" id="s-cta">
+      <div class="cta-box">
+        <div class="glow-ring cta-glow"></div>
+        <div class="finish-flag">🏁</div>
+        <h2>Suka sama <span class="gradient-text">Blue Racer</span>?</h2>
+        <p>Follow perjalanan si biru & jangan lupa gaspol dengan aman. Ride safe, look cool. 😎</p>
+        <a href="#" class="btn btn-primary" data-goto="0">Balik ke Start ↩</a>
+        <footer class="footer">
+          <p>Made with 💙 for my <b>R15M</b> · Photos by <b>MIISHOOT</b></p>
+          <p class="small">© 2026 · Blue Racer Garage · Gaspol tapi tetap safety first 🏍️</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- Slide navigation controls -->
+  <button class="nav-arrow prev" id="prevBtn" aria-label="Slide sebelumnya">‹</button>
+  <button class="nav-arrow next" id="nextBtn" aria-label="Slide berikutnya">›</button>
+
+  <!-- Slide dots -->
+  <div class="dots" id="dots">
+    <button class="dot" data-goto="0" aria-label="Hero"></button>
+    <button class="dot" data-goto="1" aria-label="Gallery"></button>
+    <button class="dot" data-goto="2" aria-label="Specs"></button>
+    <button class="dot" data-goto="3" aria-label="Keunggulan"></button>
+    <button class="dot" data-goto="4" aria-label="CTA"></button>
   </div>
-
-  <!-- GALLERY -->
-  <section class="section gallery" id="gallery">
-    <div class="section-head reveal">
-      <span class="eyebrow">📸 Photo Dump</span>
-      <h2>Real Shots, No Cap</h2>
-      <p>Sesi malam yang aesthetic. Setiap sudut punya cerita.</p>
-    </div>
-    <div class="gallery-grid">
-      <figure class="g-item g-big reveal" data-tilt>
-        <img src="image.png" alt="R15M tampak depan" />
-        <figcaption>Front Face · Blue LED Eyes 👁️</figcaption>
-      </figure>
-      <figure class="g-item reveal" data-tilt>
-        <img src="WhatsApp Image 2026-07-12 at 20.30.43.jpeg" alt="Knalpot XRX R15M" />
-        <figcaption>XRX Exhaust · Ganas 🔊</figcaption>
-      </figure>
-      <figure class="g-item reveal" data-tilt>
-        <img src="WhatsApp Image 2026-07-12 at 20.30.44.jpeg" alt="Detail R15M" />
-        <figcaption>Detail Mode · Clean 🧼</figcaption>
-      </figure>
-      <figure class="g-item reveal" data-tilt>
-        <img src="WhatsApp Image 2026-07-12 at 20.30.45.jpeg" alt="R15M side" />
-        <figcaption>Side Profile · Iconic ⚡</figcaption>
-      </figure>
-      <figure class="g-item g-wide reveal" data-tilt>
-        <img src="WhatsApp Image 2026-07-12 at 20.30.45 (1).jpeg" alt="R15M angle" />
-        <figcaption>Golden Angle · Mahal Look 💎</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- SPECS -->
-  <section class="section specs" id="specs">
-    <div class="section-head reveal">
-      <span class="eyebrow">⚙️ The Numbers</span>
-      <h2>Spek yang Bikin Melongo</h2>
-    </div>
-    <div class="specs-grid">
-      <div class="spec-card reveal">
-        <h3>155.1 cc</h3>
-        <p>Mesin liquid-cooled 4-stroke, SOHC 4-valve dengan teknologi VVA.</p>
-      </div>
-      <div class="spec-card reveal">
-        <h3>Deltabox</h3>
-        <p>Sasis Deltabox khas R-Series, ringan tapi rigid buat handling maksimal.</p>
-      </div>
-      <div class="spec-card reveal">
-        <h3>USD Fork</h3>
-        <p>Suspensi upside-down bikin stabil di kecepatan tinggi & tikungan tajam.</p>
-      </div>
-      <div class="spec-card reveal">
-        <h3>Quick Shifter</h3>
-        <p>Ganti gigi tanpa kopling — feel MotoGP di jalanan harian. 🏁</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- KEUNGGULAN -->
-  <section class="section adv" id="keunggulan">
-    <div class="section-head reveal">
-      <span class="eyebrow">🏆 Why It Slaps</span>
-      <h2>Keunggulan <span class="gradient-text">R15M-ku</span></h2>
-      <p>Alasan kenapa motor ini beda dari yang lain.</p>
-    </div>
-    <div class="adv-grid">
-      <article class="adv-card reveal">
-        <div class="adv-icon">🎨</div>
-        <h3>Desain Aggressive & Elegan</h3>
-        <p>Livery biru-putih dengan full fairing yang bikin siapapun nengok pas lewat. Aura sport bike premium yang gak murahan.</p>
-      </article>
-      <article class="adv-card reveal">
-        <div class="adv-icon">💙</div>
-        <h3>Blue LED Signature</h3>
-        <p>Lampu LED biru menyala tajam di malam hari. Estetik banget buat night ride, tampil beda dari yang standar.</p>
-      </article>
-      <article class="adv-card reveal">
-        <div class="adv-icon">🔊</div>
-        <h3>Knalpot XRX Ganas</h3>
-        <p>Suara racing yang bulat dan berkarakter. Bikin adrenalin naik tiap kali digas, tapi tetap enak didengar.</p>
-      </article>
-      <article class="adv-card reveal">
-        <div class="adv-icon">⚡</div>
-        <h3>Performa Responsif</h3>
-        <p>Mesin VVA 155cc yang bertenaga di putaran atas. Akselerasi galak, cocok buat harian maupun touring.</p>
-      </article>
-      <article class="adv-card reveal">
-        <div class="adv-icon">🛡️</div>
-        <h3>Handling Presisi</h3>
-        <p>Sasis Deltabox + USD fork bikin motor stabil dan lincah. Nikung jadi PD, badan ikut nyatu sama motor.</p>
-      </article>
-      <article class="adv-card reveal">
-        <div class="adv-icon">💎</div>
-        <h3>Value & Gengsi</h3>
-        <p>Punya R15M bukan cuma soal transportasi — ini investasi gaya. Look mahal, feel mewah, vibe juara.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section cta" id="cta">
-    <div class="cta-box reveal">
-      <div class="glow-ring cta-glow"></div>
-      <h2>Suka sama <span class="gradient-text">Blue Beast</span>?</h2>
-      <p>Follow perjalanan si biru & jangan lupa gaspol dengan aman. Ride safe, look cool. 😎</p>
-      <a href="#hero" class="btn btn-primary">Back to Top ↑</a>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <p>Made with 💙 for my <b>R15M</b> · Photos by <b>MIISHOOT</b></p>
-    <p class="small">© 2026 · Blue Beast Garage · Gaspol tapi tetap safety first 🏍️</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
