@@ -824,6 +824,8 @@ body::before {
     align-content: start;
     justify-items: center;
     gap: 1.5rem;
+    height: 100%;
+    min-height: 0;
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
@@ -854,15 +856,24 @@ body::before {
   .logo { font-size: 1.25rem; }
   .nav-cta { padding: 0.4rem 0.8rem; font-size: 0.9rem; }
 
-  .slide { padding: 4.6rem 5vw 5.2rem; }
+  .slide { padding: 4.4rem 5vw 5rem; }
   .slide-inner { justify-content: flex-start; padding-top: 0.5rem; }
 
+  /* Hero: proporsi rapi di layar HP */
+  .hero { gap: 1.1rem; padding-bottom: 1rem; }
+  .hero-visual { margin-bottom: 0.25rem; }
+  .hero-img { max-width: min(68vw, 300px); }
+  .glow-ring { width: 68vw; max-width: 280px; height: 68vw; max-height: 280px; }
+  .tacho { width: 58px; height: 58px; top: -4%; }
+  .tagline { font-size: 0.72rem; letter-spacing: 2px; margin-bottom: 0.6rem; }
+  .plate { width: 52px; height: 52px; margin-bottom: 0.7rem; }
+  .plate-num { font-size: 1.6rem; }
   .hero-title { font-size: clamp(2.6rem, 15vw, 3.6rem); }
-  .hero-sub { font-size: 1rem; }
-  .hero-stats { gap: clamp(1rem, 7vw, 1.8rem); margin-top: 1.6rem; }
+  .hero-sub { font-size: 0.98rem; margin: 1rem auto 1.3rem; }
+  .hero-stats { gap: clamp(1rem, 7vw, 1.8rem); margin-top: 1.4rem; }
   .stat .num { font-size: clamp(1.6rem, 9vw, 2rem); }
-  .hero-btns { width: 100%; }
-  .btn { flex: 1 1 auto; text-align: center; }
+  .hero-btns { width: 100%; gap: 0.7rem; }
+  .btn { flex: 1 1 auto; text-align: center; padding: 0.8rem 1rem; }
 
   .section-head { margin-bottom: 1.6rem; }
   .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: minmax(190px, 52vw); gap: 0.9rem; }
