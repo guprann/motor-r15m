@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Localhost (R15M)",
+      "type": "shell",
+      "command": "python3 -m http.server 8080",
+      "options": { "cwd": "${workspaceFolder}" },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "runOptions": { "instanceLimit": 1 },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Menjalankan web server lokal di http://localhost:8080"
+    }
+  ]
+}
